@@ -13,7 +13,7 @@ public:
     DivisionByZero (std::string& s) : m_error(s)
     {
     }
-    std::string outMessage()
+    std::string& outMessage()
     {
         return m_error;
     }

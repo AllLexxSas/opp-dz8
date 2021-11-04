@@ -21,7 +21,7 @@ class OffTheField : public std::exception
 private:
 
 public:
-    OffTheField(const char *msg) : std::exception(msg)
+    OffTheField(char *msg) : std::exception(msg)
     {
     }
 };

@@ -10,7 +10,7 @@
 class DivisionByZero
 {
 public:
-    DivisionByZero (std::string s) : m_error(s)
+    DivisionByZero (std::string& s) : m_error(s)
     {
     }
     std::string outMessage()
@@ -24,7 +24,10 @@ private:
 double div (double a, double b)
 {
     if (b == 0)
-        throw DivisionByZero ("cannot be divided by zero\n");
+    {
+        std::string message = "cannot be divided by zero\n";
+        throw DivisionByZero (message);
+    }
 
     return ( a/b);
 }
